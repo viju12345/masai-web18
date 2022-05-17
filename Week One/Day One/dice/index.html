@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #winner {
+            margin: auto;
+            text-align: center;
+        }
+
+        #win {
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        #winner>div {
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 170px;
+            height: 50px;
+            margin: auto;
+            padding-top: 5px;
+            background-color: bisque;
+            color: rgb(230, 226, 226);
+        }
+
+        #box {
+            display: flex;
+            gap: 45px;
+            width: 40%;
+            margin: auto;
+            margin-top: 90px;
+        }
+
+        #box>div {
+            margin: auto;
+            border: 1px solid black;
+            width: 80px;
+            height: 80px;
+            font-size: 60px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 4px;
+            background-color: rgb(222, 217, 217);
+        }
+
+        #team {
+            display: flex;
+            gap: 90px;
+            width: 60%;
+            margin-left: 32%;
+            margin-bottom: 50px;
+        }
+
+        #roll {
+            margin-left: 45%;
+            height: 40px;
+            background-color: rgb(75, 75, 229);
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="winner">
+        <h2>Winner</h2>
+        <div id="win"></div>
+    </div>
+    <div id="box">
+        <div id="member-1"></div>
+        <div id="member-2"></div>
+        <div id="member-3"></div>
+    </div>
+    <div id="team">
+        <h3>Member A</h3>
+        <h3>Member B</h3>
+        <h3>Member C</h3>
+    </div>
+    <button id="roll">ROLL THE DICE</button>
+</body>
+
+</html>
+<script>
+    document.getElementById("roll").addEventListener("click", rollfun)
+
+    function rollfun() {
+        var dice1 = document.getElementById("member-1");
+        var dice2 = document.getElementById("member-2");
+        var dice3 = document.getElementById("member-3");
+        var photo = document.getElementById("win")
+        var d1 = Math.floor(Math.random() * 6) + 1;
+        var d2 = Math.floor(Math.random() * 6) + 1;
+        var d3 = Math.floor(Math.random() * 6) + 1;
+        dice1.innerHTML = d1;
+        dice2.innerHTML = d2;
+        dice3.innerHTML = d3;
+
+
+
+
+
+
+        if (d1 > d2 && d2 > d3) {
+            photo.innerHTML = "Member A";
+            photo.style.backgroundColor = "green"
+            dice1.style.backgroundColor = "green"
+            dice2.style.backgroundColor = "yellow"
+            dice3.style.backgroundColor = "red"
+
+        }
+
+        if (d2 > d1 && d1 > d3) {
+            photo.innerHTML = "Member B";
+            photo.style.backgroundColor = "green"
+            dice2.style.backgroundColor = "green"
+            dice1.style.backgroundColor = "yellow"
+            dice3.style.backgroundColor = "red"
+        }
+
+        if (d3 > d1 && d1 > d2) {
+            photo.innerHTML = "Member C";
+            photo.style.backgroundColor = "green"
+            dice3.style.backgroundColor = "green"
+            dice1.style.backgroundColor = "Yellow"
+            dice2.style.backgroundColor = "red"
+        }
+
+        if (d1 == d2) {
+            dice1.style.backgroundColor = "blue"
+            dice2.style.backgroundColor = "blue"
+        }
+        if (d2 == d3) {
+            dice2.style.backgroundColor = "blue"
+            dice3.style.backgroundColor = "blue"
+        }
+        if (d3 == d1) {
+            dice3.style.backgroundColor = "blue"
+            dice1.style.backgroundColor = "blue"
+        }
+
+    }
+</script>
