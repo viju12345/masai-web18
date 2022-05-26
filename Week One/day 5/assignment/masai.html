@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="masai.css">
+
+</head>
+
+<body>
+    <div id="navbar">
+        <div>Batch01 : </div>
+        <div>Batch02 : </div>
+        <div>Batch03 : </div>
+        <div>Batch04 : </div>
+        <h3 id="dash"><a href="masaidash.html">Dashbord</a></h3>
+    </div>
+    <h1>Add Student Data</h1>
+    <div id="box">
+
+        <form action="" id="form" onsubmit="storedata(event)">
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="number" id="unit" placeholder="Unit">
+            <select name="" id="batch">
+                <option value="">Select</option>
+                <option value="Batch01">Batch01</option>
+                <option value="Batch02">Batch02</option>
+                <option value="Batch03">Batch03</option>
+                <option value="Batch04">Batch04</option>
+            </select>
+            <input type="text" id="course" placeholder="Couse">
+            <input type="url" id="img" placeholder="Image">
+            <button id="submit">Submit Form</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
+<script src="masai.js"></script>

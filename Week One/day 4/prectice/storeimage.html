@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="url" id="url">
+    <button onclick="storeimage()">Store Image</button>
+    <button onclick="slideshow()">Slideshow</button>
+</body>
+
+</html>
+<script>
+
+    function storeimage() {
+        let image = document.getElementById("url").value
+
+        let images = JSON.parse(localStorage.getItem("store")) || [];
+        images.push(image);
+
+        localStorage.setItem("store", JSON.stringify(images))
+
+        document.getElementById("url").value = null
+
+    }
+
+    function slideshow() {
+        window.location.href = "slideshow.html"
+    }
+
+</script>

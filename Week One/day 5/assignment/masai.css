@@ -1,0 +1,118 @@
+#navbar {
+    display: flex;
+    gap: 90px;
+    width: 100%;
+    font-size: 35px;
+    background-color: teal;
+    color: black;
+    height: 90px;
+    margin-bottom: 100px;
+}
+
+body {
+    margin-top: 0px;
+    width: 100%;
+    margin-left: 0px;
+}
+
+#navbar>div {
+    margin: auto;
+
+}
+
+
+#box {
+    width: 25%;
+    height: auto;
+    margin: auto;
+    padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 7px;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+#form>input {
+    width: 100%;
+    background-color: rgb(245, 240, 240);
+    height: 30px;
+    margin-top: 30px;
+    border-radius: 5px;
+
+}
+
+#batch {
+    margin-top: 30px;
+    height: 30px;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+#submit {
+    background-color: red;
+    color: wheat;
+    font-size: 25px;
+    border-radius: 5px;
+    margin-top: 30px;
+    text-align: center;
+
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: green;
+}
+
+#dash {
+    font-size: 30px;
+    margin-right: 30px;
+    background-color: wheat;
+    border-radius: 2px;
+    padding: auto;
+
+}
+
+#dash>a {
+    text-decoration: none;
+    color: black;
+}
+
+#dash:hover {
+    cursor: pointer;
+    background-color: white;
+}
+
+#table {
+    margin: auto;
+    font-size: 30px;
+    background-color: rgb(154, 233, 154);
+
+}
+
+#thead>tr>th {
+
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#tbody>tr>td {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#tbody>tr>td:nth-child(6) {
+    color: white;
+    background-color: rgb(241, 53, 53);
+}
+
+#tbody>tr>td>img {
+    width: 150px;
+    height: 170px;
+}

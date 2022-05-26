@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #timer {
+            font-size: 100px;
+            margin-left: 40%;
+            color: blue;
+        }
+
+        #rtimer {
+            font-size: 100px;
+            margin-left: 40%;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="timer"></h1>
+    <h2 id="rtimer"></h2>
+</body>
+
+</html>
+<script>
+    let h1 = document.getElementById("timer")
+    function counter() {
+
+        let i = 0;
+        setInterval(function () {
+            if (i === 60) {
+                i = 0
+            }
+            i = i + 1;
+            h1.innerText = i
+
+        }, 1000)
+    }
+    counter();
+
+    let h2 = document.getElementById("rtimer")
+    function runer() {
+        let i = 60;
+        let h2a = setInterval(function () {
+
+            if (i === 1) {
+                clearInterval(h2a)
+                alert("Times up")
+            }
+            i = i - 1;
+            h2.innerText = i;
+            // console.log(i)
+
+        }, 1000);
+    }
+    runer()
+
+
+
+
+</script>

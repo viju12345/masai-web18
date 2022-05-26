@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mapouter {
+            position: relative;
+            text-align: right;
+            height: 500px;
+            width: 600px;
+        }
+    </style><a href="https://www.embedgooglemap.net">embedding google maps</a>
+    <style>
+        .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            height: 500px;
+            width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="city">
+    <button onclick="getdata()">search data</button>
+
+
+    <iframe width="600" height="500" id="gmap_canvas"
+        src="https://maps.google.com/maps?q=mau&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no"
+        marginheight="0" marginwidth="0">
+    </iframe>
+
+
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
+<script>
+    const api_key = "0766496ef5a273046e9a97c056c5ff7f";
+
+    // https://api.openweathermap.org/data/2.5/weather?q=mau&appid=0766496ef5a273046e9a97c056c5ff7f
+
+    async function getdata() {
+        let city = document.getElementById("city").value;
+
+        let url = "https://api.openweathermap.org/data/2.5/weather?q=mau&appid=0766496ef5a273046e9a97c056c5ff7f"
+        // console.log(url)
+
+        // async function getdata() {
+
+        let res = await fetch(url)
+        let weather = await res.json()
+        console.log(weather);
+        append(weather)
+
+        console.log("err");
+
+        // }
+
+        function append(weater) {
+            let container = document.getElementById("container")
+
+            let name = document.createElement("p")
+            name.innerText = weather.name
+
+            let h3 = document.createElement("h3");
+            h3.innerText = weather.name
+
+            let p = document.createElement("p")
+            p.innerText = 'Curernt temp: ${weater.main.temp}';
+
+            let p1 = document.createElement("p");
+            p1.innerText = 'max temp: ${ weater.main.temp }'
+
+
+            container.append(name, h3, p);
+            let iframe = document.getElementById("gmap_canvas");
+            iframe.src = 'https://maps.google.com/maps?q=${weater.name}&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder = "0" scrolling = "no" '
+
+        }
+        function getlocationWeather() {
+            navigator.geolocation.getlocationWeather(success);
+
+            function success(position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+
+                console.log()
+            }
+        }
+
+
+    }
+
+
+</script>
