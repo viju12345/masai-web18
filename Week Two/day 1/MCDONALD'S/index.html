@@ -6,39 +6,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #image>img {
-            width: 270px;
-            height: 270px;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
+
 </head>
 
 <body>
-    <div id="image">
-        <img id=""
-            src="https://c.ndtvimg.com/2019-01/u8o6c0qg_mc-donalds_625x300_04_January_19.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=886"
-            alt="">
-        <img src="https://c.ndtvimg.com/2019-01/u8o6c0qg_mc-donalds_625x300_04_January_19.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=886"
-            alt="">
-        <img src="https://d30hko96l9xirl.cloudfront.net/media/2020/11/McDonalds-to-roll-out-new-McPlant-faux-meat-patty-next-year.jpg"
-            alt="">
+    <a id="orderbtn" href="order.html">See Your Order</a>
+    <div id="container">
+
+        <div id="headshow">
+
+            <img src="https://st2.depositphotos.com/3047529/7551/i/600/depositphotos_75511653-stock-photo-mcdonalds-logo-on-a-blue.jpg"
+                alt="Mackdonal">
+
+        </div>
+
+        <div id="selectbox">
+            <form action="" onsubmit="onsubmit">
+                Order Your Food
+                <br>
+                <input type="checkbox" id="mb"> BIG MAC
+
+                <br>
+                <input type="checkbox" id="pata"> PATATINE
+
+                <br>
+                <input type="checkbox" id="cm">CRISPY MACBACON
+
+                <br>
+                <input type="checkbox" id="cmn">CHICKEN MC NUGGETS
+
+                <br>
+                <input type="checkbox" id="dcb">DOUBLE CHICKEN BBQ
+
+                <br>
+                <input type="checkbox" id="dc">DOUBLE CHEESEBURGUR
+
+                <br>
+                <input type="checkbox" id="cwc">CHICKEN WRAP CROCCANTE
+
+                <br>
+                <input type="submit" id="orderfood" value="Order Food">
+            </form>
+
+        </div>
     </div>
 
-    <button id="order"><a href="order.html">Your Order</a></button>
-    <!-- <input type="text" id="name" placeholder="food name"> -->
-    <select name="" id="option">
-        <option value="">select</option>
-        <option value="">PATATINE</option>
-        <option value="">CRISPY MACBACON</option>
-        <option value="">BIG MAC</option>
-        <option value="">DOUBLE CHEESEBURGUR</option>
-        <option value="">CHICKEN WRAP CROCCANTE</option>
-        <option value="">CHICKEN MC NUGGETS</option>
-        <option value="">DOUBLE CHICKEN BBQ</option>
-    </select>
-    <button id="placed">Order Food</button>
+
+
+    <div>
+        <img id="orderpic"
+            src="https://c.ndtvimg.com/2019-01/u8o6c0qg_mc-donalds_625x300_04_January_19.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=886"
+            alt=" Big MAC">
+
+    </div>
 </body>
 
 </html>
-<script src="/index.js"></script>
+<script src="index.js"></script>

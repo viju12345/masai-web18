@@ -1,0 +1,50 @@
+#container {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: auto;
+    width: 26%;
+    padding: 15px;
+    background-color: rgb(206, 202, 202);
+    border-radius: 8px;
+}
+
+#headshow {
+    margin: auto;
+}
+
+#headshow>img {
+    margin-left: 30%;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+#orderbtn {
+    background-color: teal;
+    color: white;
+    text-decoration: none;
+    margin-left: 90%;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#orderpic {
+    margin: auto;
+    width: 150px;
+    height: 150px;
+}
+
+#selectbox {
+    margin: auto;
+    width: 300px;
+    height: auto;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+#more {
+    text-decoration: none;
+    background-color: rgb(34, 158, 158);
+    color: white;
+    padding: 5px;
+    border-radius: 3px
+}

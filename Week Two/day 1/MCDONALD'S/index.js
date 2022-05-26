@@ -36,8 +36,6 @@ function checkfun() {
         orderpic.src = "https://d30hko96l9xirl.cloudfront.net/media/2020/11/McDonalds-to-roll-out-new-McPlant-faux-meat-patty-next-year.jpg"
     })
 
-    order_promise.catch(function (err) {
-        orderpic.srd = ""
-    })
+
 
 }
