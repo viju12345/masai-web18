@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            height: 500px;
+            width: 600px;
+            margin-top: 20px;
+        }
+
+        #map {
+            width: 600px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="city">
+    <button onclick="getData()">search</button>
+
+    <div id="container"></div>
+    <div id="gmap_canvas">
+        <iframe id="map" src="" frameborder="0"></iframe>
+    </div>
+</body>
+
+</html>
+
+<script src="test1.js"></script>

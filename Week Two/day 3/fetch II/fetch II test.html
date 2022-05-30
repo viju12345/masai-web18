@@ -51,14 +51,14 @@
         let city = document.getElementById("city").value;
 
         let url = "https://api.openweathermap.org/data/2.5/weather?q={city}&appid=0766496ef5a273046e9a97c056c5ff7f"
-        // console.log(url)
+
 
         let res = await fetch(url)
         let weather = await res.json()
         console.log(weather);
         append(weather)
 
-        console.log("err");
+
 
 
 
@@ -80,7 +80,7 @@
 
             container.append(name, h3, p);
             let iframe = document.getElementById("gmap_canvas");
-            iframe.src = 'https://maps.google.com/maps?q=${weater.name}&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder = "0" scrolling = "no" '
+            iframe.src = 'https://maps.google.com/maps?q=${city}&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder = "0" scrolling = "no" '
 
         }
         function getlocationWeather() {
@@ -90,7 +90,8 @@
                 const latitude = position.coords.latitude;
                 const longitude = position.coords.longitude;
 
-                console.log()
+                let location = 'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=0766496ef5a273046e9a97c056c5ff7f'
+                console.log(position)
             }
         }
 

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="content">
+        laksdjfflkadjsflkjadskf
+    </h1>
+</body>
+
+</html>
+<script>
+
+    // var yourPromise = new Promise(function (resolve, reject) {
+    //     resolve("give a gift pc")
+    //     reject("fail")
+    // })
+
+    // console.log(yourPromise)
+    let word = document.getElementById("content");
+
+    function checkingdata() {
+        return false;
+    }
+
+    var p = new Promise(function (resolve, reject) {
+
+        setTimeout(function () {
+
+            let per = checkingdata()
+            if (per) {
+                resolve("pass")
+            }
+            else {
+                reject("fail")
+            }
+        }, 3000);
+    })
+
+
+
+    console.log(p)
+
+    p.then(function (value) {
+        word.innerText = "It means hello babu"
+
+        // console.log("value:", value)
+    })
+    // p.then(function (value) {
+
+    // })
+    p.catch(function (value) {
+        word.innerText = "I am calling my borther"
+        // console.log("value", value)
+    })
+
+
+
+
+
+
+
+
+
+
+
+</script>
