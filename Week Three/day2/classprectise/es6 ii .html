@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+
+    // function person(n) {
+    //     this.name = n;
+    //     this.print = function () {
+    //         person.prototype.print = function () {
+    //             console.log(this.name);
+    //         }
+
+    //     }
+    // }
+    // let p1 = new person("Saroj");
+    // console.log(p1)
+    // # prototype chaining
+    // class person {
+    //     constructor(n) {
+    //         this.name = n;
+    //     }
+    //     print() {
+    //         console.log(this.name);
+
+    //     }
+    // }
+    // let p1 = new person("sanjeev");
+    // console.log(p1)
+
+
+
+    // 1. function pizza(){
+    //     return "pizza";
+
+    // }
+
+    // function items() {
+    //     return ["butter", "puneer"]
+    // }
+    // function cook() {
+    //     let i = items();
+    //     consol.log()
+    // }
+
+
+    // class stack {
+    //     constructor() {
+    //         this.length = 0;
+    //         this.stack = []
+
+    //     }
+    //     push(el) {
+    //         this.stack[this.length] = el;
+    //         this.length++;
+    //     }
+    //     pop() {
+    //         this.stack.pop()
+    //         this.length--;
+    //     }
+    //     peek() {
+    //         return this.stack[this.length - 1];
+    //     }
+
+    // }
+    // let s1 = new stack();
+
+    // s1.push(1);
+    // s1.push(2);
+    // s1.push(10);
+    // console.log(s1.peek());
+    // s1.pop();
+    // console.log(s1);
+
+
+
+    class mobile {
+        constructor(b, bt) {
+            this.brand = b;
+            this.calling = true;
+            this.battery = bt;
+        }
+    }
+    let m1 = new mobile("iphone", 500)
+    console.log(m1);
+
+    class smartphone extends mobile {
+        constructor(b, bt, c, s) {
+            super(b, bt);
+            this.brand = b;
+            this.calling = true;
+            this.camera = c;
+            this.screensiz = s;
+        }
+    }
+    let m2 = new smartphone("iphone", 5000, "20px", "6inch")
+    console.log(m2);
+
+
+
+
+
+</script>

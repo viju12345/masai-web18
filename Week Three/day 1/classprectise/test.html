@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: grid;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>class discusion</h1>
+
+    <input type="text" id="query">
+
+    <button onclick="search()">search</button>
+
+    <div id="container">
+
+    </div>
+
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/sEunbhvRQSQ" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe> -->
+</body>
+
+</html>
+
+<script>
+    // let arr = [1, 2, 3, 4, 5, 6, 6, 7]
+    // console.log(...arr)
+
+
+    // let arr1 = [1, 2, 3, 4, 5]
+    // let arr2 = [6, 7, 8, 9, 0]
+    // let newarr = [...arr1, ...arr2]
+    // console.log(newarr)
+
+    // rest operater
+
+    // function fun(a, c, ...b) {
+    //     console.log(a)
+    //     console.log(c)
+    //     console.log(b)
+    // }
+    // fun("box1", "box2", "box3", "box4", "box5")
+
+
+    const youtube_key = `AIzaSyAZ-kSbO2IcLIArmtFDxU_jA9OSlYF1r5o`
+
+    let url = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=thor&key=[YOUR_API_KEY]"
+
+
+    // async function getdata() {
+    //     let res = await fetch(url)
+    //     let result = res.fetch()
+    //     console.log(result)
+    // }
+    // getdata();
+
+
+    let search = async () => {
+        try {
+            let query = document.getElementById("query").value
+            let url = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=" + query + "r&key=" + youtube_key;
+            let res = await fetch(url);
+            let data = await res.json();
+            console.log(data.items)
+        }
+        catch (err) {
+            console.log(err)
+        }
+
+
+        let append = (data) => {
+            let container = document.getElementById("container")
+
+            data.forEach(({ id: { videoId }, snippet: { title, thumbnails } }) => {
+                console.log(videoId)
+                let div = document.createElement("div");
+                let img = document.createElement("div")
+                img.src = snippet.thumbnails.default.url;
+                let iframe = document.createElement("iframe")
+                iframe.src = "https://www.youtube.com/embed/" + videoId;
+                iframe.allow = "fullscreen";
+                let h3 = document.createElement("h3")
+                h3.innerText = title;
+
+                div.append(iframe, h3);
+                let video = {
+                    title,
+                    videoId,
+                }
+                // div.onclick = () => {
+                //     playVideo();
+                // }
+
+                container.append(div)
+            })
+
+
+        };
+        // let playVideo = (video) => {
+        //     console.log(video);
+        //     localStorage.setItem("video", JSON.stringify(video))
+        //     location.href = "video.html";
+        // }
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+</script>
