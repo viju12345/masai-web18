@@ -1,0 +1,66 @@
+body {
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    background-color: rgb(210, 206, 206);
+}
+
+#navbar {
+    background-color: teal;
+    display: flex;
+
+
+}
+
+#cont {
+    padding: 20px
+}
+
+#cont>div {
+    cursor: pointer;
+}
+
+#youtubeimg {
+    width: 180px;
+    height: 100px;
+    margin-left: 25px;
+    margin-right: 8%;
+
+}
+
+#search {
+    width: 400px;
+    height: 30px;
+    margin: auto;
+    margin-right: 0px;
+}
+
+#button {
+    margin: auto;
+    height: 35px;
+    width: 100px;
+    margin-left: 10px;
+    background-color: rgb(239, 28, 28);
+    border-radius: 3px;
+    border: 0ch;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: rgb(222, 72, 72);
+}
+
+#cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+#cont>div {
+    border: 1px solid black;
+
+}
+
+#cont>div>img {
+    width: 100%;
+}
